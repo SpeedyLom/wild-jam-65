@@ -4,15 +4,16 @@
 [ext_resource type="Script" path="res://entities/player.gd" id="1_vqbhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsrgs"]
-radius = 7.0
-height = 16.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_vqbhu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ctegb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_gsrgs")
