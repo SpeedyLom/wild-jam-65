@@ -1,11 +1,25 @@
+class_name Player
 extends CharacterBody2D
 
-@export var speed = 200
+@onready var animationPlayer := $AnimationPlayer
 
-func get_input():
+@export var speed: int = 200
+
+func get_input() -> void:
 	var input_direction = Input.get_vector("left", "right", "up", "down")
+	
+	match input_direction:
+		Vector2.LEFT:
+			animationPlayer.play("left")
+		Vector2.RIGHT:
+			animationPlayer.play("right")
+		Vector2.DOWN:
+			animationPlayer.play("down")
+		Vector2.UP:
+			animationPlayer.play("up")
+	
 	velocity = input_direction * speed
 
-func _physics_process(delta):
+func _physics_process(_delta: float) -> void:
 	get_input()
 	move_and_slide()

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwsngm3i8lh61"]
+
+[ext_resource type="Script" path="res://scenes/trolley.gd" id="1_81c8e"]
+[ext_resource type="Texture2D" uid="uid://x5ix6i1frhpu" path="res://sprites/trolley.png" id="1_r03p7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iouy"]
+size = Vector2(25, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s127t"]
+size = Vector2(442, 20)
+
+[node name="Trolley" type="AnimatableBody2D"]
+collision_mask = 0
+script = ExtResource("1_81c8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r03p7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_6iouy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_bottom = 350
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(152, 113)
+shape = SubResource("RectangleShape2D_s127t")

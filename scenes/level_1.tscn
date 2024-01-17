@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfycw001yuasl"]
+[gd_scene load_steps=5 format=3 uid="uid://dfycw001yuasl"]
 
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_0n6ej"]
 [ext_resource type="PackedScene" uid="uid://78evlvu2rxtg" path="res://scenes/aisle.tscn" id="1_h28c2"]
 [ext_resource type="PackedScene" uid="uid://b6on6npwqcbud" path="res://entities/player.tscn" id="2_fle2i"]
+[ext_resource type="PackedScene" uid="uid://cwsngm3i8lh61" path="res://scenes/trolley.tscn" id="4_6ev2h"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_0n6ej")
 
-[node name="Aisle" parent="." instance=ExtResource("1_h28c2")]
+[node name="Aisles" type="Node2D" parent="."]
+
+[node name="Aisle" parent="Aisles" instance=ExtResource("1_h28c2")]
 
 [node name="Player" parent="." instance=ExtResource("2_fle2i")]
 position = Vector2(316, 313)
+
+[node name="Trolley" parent="." instance=ExtResource("4_6ev2h")]
+position = Vector2(168, 261)
