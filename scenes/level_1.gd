@@ -4,7 +4,7 @@ extends Node2D
 @onready var Aisles := $Aisles
 
 var aislePosition := -0
-const aisleHeight := -340
+const aisleHeight := -366
 
 func _ready():
 	var aisle = Aisle.instantiate()
