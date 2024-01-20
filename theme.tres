@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://y8y8l8ilc4h6"]
+
+[ext_resource type="FontFile" uid="uid://dln3w5esa6wpc" path="res://assets/kenvector_future.ttf" id="1_gqhk5"]
+[ext_resource type="Texture2D" uid="uid://cltwtseb0315p" path="res://sprites/red_button13.png" id="1_h6pot"]
+[ext_resource type="Texture2D" uid="uid://dppj3xg3t3af6" path="res://sprites/red_button11.png" id="2_vr4qn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1eslx"]
+texture = ExtResource("1_h6pot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vt2sd"]
+texture = ExtResource("2_vr4qn")
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_1eslx")
+Button/styles/normal = SubResource("StyleBoxTexture_vt2sd")
+Label/font_sizes/font_size = 14
+Label/fonts/font = ExtResource("1_gqhk5")
