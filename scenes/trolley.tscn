@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwsngm3i8lh61"]
+[gd_scene load_steps=6 format=3 uid="uid://cwsngm3i8lh61"]
 
 [ext_resource type="Script" path="res://scenes/trolley.gd" id="1_81c8e"]
 [ext_resource type="Texture2D" uid="uid://x5ix6i1frhpu" path="res://sprites/trolley.png" id="1_r03p7"]
@@ -8,6 +8,9 @@ size = Vector2(25, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s127t"]
 size = Vector2(442, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5p4d4"]
+radius = 40.0
 
 [node name="Trolley" type="AnimatableBody2D"]
 collision_mask = 0
@@ -37,4 +40,12 @@ shape = SubResource("RectangleShape2D_s127t")
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5p4d4")
+debug_color = Color(0.917647, 0.223529, 0.466667, 0.419608)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

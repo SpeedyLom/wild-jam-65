@@ -33,5 +33,8 @@ func hasItem() -> bool:
 	return heldProduct != null
 	
 func holdItem(product: Product) -> void:
-	add_child(product)
+	call_deferred("add_child", product)
 	heldProduct = product
+	
+func takeItem() -> void:
+	heldProduct.queue_free()

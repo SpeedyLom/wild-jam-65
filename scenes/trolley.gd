@@ -31,3 +31,8 @@ func _on_timer_timeout():
 		timer.wait_time = randi_range(10, 25)
 		
 	timer.start()
+
+
+func _on_area_2d_body_entered(body: Player):
+	if (body.hasItem()):
+		body.takeItem()
