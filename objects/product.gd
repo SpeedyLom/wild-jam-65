@@ -10,3 +10,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func _on_body_entered(body: Player):
+	if (body.hasItem() == false):
+		body.holdItem(self.duplicate())
+		set_deferred("monitoring", false)
+		call_deferred("queue_free")

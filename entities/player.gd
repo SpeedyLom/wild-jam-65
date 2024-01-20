@@ -5,6 +5,8 @@ extends CharacterBody2D
 
 @export var speed: int = 200
 
+var heldProduct: Product = null
+
 func get_input() -> void:
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	
@@ -23,3 +25,13 @@ func get_input() -> void:
 func _physics_process(_delta: float) -> void:
 	get_input()
 	move_and_slide()
+	
+	if (hasItem()):
+		heldProduct.global_position = global_position + Vector2(0, -20)
+
+func hasItem() -> bool:
+	return heldProduct != null
+	
+func holdItem(product: Product) -> void:
+	add_child(product)
+	heldProduct = product
