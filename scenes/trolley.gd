@@ -35,4 +35,8 @@ func _on_timer_timeout():
 
 func _on_area_2d_body_entered(body: Player):
 	if (body.hasItem()):
-		body.takeItem()
+		var product = body.takeItem()
+		product.global_position = Vector2(randi_range(-20, 20), randi_range(-25, 25))
+		product.monitoring = false
+		call_deferred("add_child", product)
+		get_tree().call_group('game', 'updateScore')

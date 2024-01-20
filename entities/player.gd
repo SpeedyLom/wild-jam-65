@@ -36,5 +36,8 @@ func holdItem(product: Product) -> void:
 	call_deferred("add_child", product)
 	heldProduct = product
 	
-func takeItem() -> void:
+func takeItem() -> Product:
+	var product = heldProduct.duplicate()
 	heldProduct.queue_free()
+	return product
+	
