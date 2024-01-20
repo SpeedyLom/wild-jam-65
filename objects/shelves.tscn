@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv72dmrsa8525"]
+[gd_scene load_steps=7 format=3 uid="uid://bv72dmrsa8525"]
 
+[ext_resource type="Script" path="res://objects/shelves.gd" id="1_o51or"]
 [ext_resource type="Texture2D" uid="uid://bf1rnj85c5ckc" path="res://sprites/shelves.png" id="1_ouwuv"]
+[ext_resource type="PackedScene" uid="uid://ci756ewuuu5at" path="res://objects/cola.tscn" id="2_h8wa5"]
+[ext_resource type="PackedScene" uid="uid://mvuaow3ys4al" path="res://objects/crisps.tscn" id="3_aysgu"]
+[ext_resource type="PackedScene" uid="uid://dbtc8hf2pv1ta" path="res://objects/dibdab.tscn" id="4_hjc64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81ixx"]
 size = Vector2(98, 128)
 
 [node name="Shelves" type="StaticBody2D"]
 collision_mask = 0
+script = ExtResource("1_o51or")
+products = Array[PackedScene]([ExtResource("2_h8wa5"), ExtResource("3_aysgu"), ExtResource("4_hjc64")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ouwuv")

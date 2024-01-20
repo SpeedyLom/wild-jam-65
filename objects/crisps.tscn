@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://mvuaow3ys4al"]
+
+[ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_0duka"]
+[ext_resource type="Texture2D" uid="uid://cwuepq0hjbog5" path="res://sprites/crisps.png" id="1_wnciy"]
+
+[node name="Crisps" instance=ExtResource("1_0duka")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("1_wnciy")

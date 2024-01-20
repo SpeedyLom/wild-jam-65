@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvwv65ctv08wr"]
+
+[ext_resource type="Script" path="res://objects/product.gd" id="1_nsmnp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_awwap"]
+radius = 35.0
+
+[node name="Product" type="Area2D" groups=["products"]]
+script = ExtResource("1_nsmnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_awwap")

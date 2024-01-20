@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci756ewuuu5at"]
+
+[ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_24jnf"]
+[ext_resource type="Texture2D" uid="uid://dmx8upsrg15up" path="res://sprites/cola.png" id="2_0jqwm"]
+
+[node name="Cola" instance=ExtResource("1_24jnf")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_0jqwm")
