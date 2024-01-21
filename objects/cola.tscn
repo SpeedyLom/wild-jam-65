@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_24jnf"]
 [ext_resource type="Texture2D" uid="uid://dmx8upsrg15up" path="res://sprites/cola.png" id="2_0jqwm"]
 
-[node name="Cola" instance=ExtResource("1_24jnf")]
+[node name="Cola" groups=["treat"] instance=ExtResource("1_24jnf")]
 price = 6
 weight = 6
 

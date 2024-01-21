@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://fb4hwdrvfwni"]
+[gd_scene load_steps=7 format=3 uid="uid://fb4hwdrvfwni"]
 
 [ext_resource type="Script" path="res://scenes/game_over.gd" id="1_hf03d"]
 [ext_resource type="Texture2D" uid="uid://dmyvh2ypwcpk3" path="res://sprites/yellow_panel.png" id="1_yvls5"]
 [ext_resource type="Theme" uid="uid://y8y8l8ilc4h6" path="res://theme.tres" id="3_uh68n"]
+[ext_resource type="Texture2D" uid="uid://cy122wjul1c4" path="res://sprites/creditcard.png" id="4_hn6jg"]
+[ext_resource type="Texture2D" uid="uid://hxm302i7e6d" path="res://sprites/weight.png" id="5_j8iyh"]
+[ext_resource type="Texture2D" uid="uid://dmx8upsrg15up" path="res://sprites/cola.png" id="6_ht7c1"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -26,38 +29,150 @@ patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="Container" type="Control" parent="."]
+[node name="MaxedCard2" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MaxedCard2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="MaxedCard2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_uh68n")
+theme_override_font_sizes/font_size = 32
+text = "You Won"
+
+[node name="Label2" type="Label" parent="MaxedCard2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "You overloaded the credit card"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MaxedCard2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_hn6jg")
+stretch_mode = 2
+
+[node name="OverloadedCart" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OverloadedCart"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="OverloadedCart/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_uh68n")
+theme_override_font_sizes/font_size = 32
+text = "You Won"
+
+[node name="Label2" type="Label" parent="OverloadedCart/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "You overloaded the shopping trolley"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="OverloadedCart/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_j8iyh")
+stretch_mode = 4
+
+[node name="ExcessTreats" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExcessTreats"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="ExcessTreats/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_uh68n")
+theme_override_font_sizes/font_size = 32
+text = "You Won"
+
+[node name="Label2" type="Label" parent="ExcessTreats/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "You overloaded the shopping trolley with treats"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ExcessTreats/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_ht7c1")
+stretch_mode = 4
+
+[node name="Lost" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Lost"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 63.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Lost/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_uh68n")
+theme_override_font_sizes/font_size = 32
+text = "You Lost"
+
+[node name="Label2" type="Label" parent="Lost/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Max out the credit card
+Or
+Buy more treats than groceries"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -28.5
+offset_top = -11.5
+offset_right = 28.5
+offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -128.0
-offset_right = 128.0
-offset_bottom = 42.0
-grow_horizontal = 2
-
-[node name="Title" type="Label" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Bordem Overload"
-
-[node name="Button" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
 theme = ExtResource("3_uh68n")
 text = "Restart"
 
-[connection signal="pressed" from="Container/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_button_pressed"]

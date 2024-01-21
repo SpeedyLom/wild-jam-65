@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_60m16"]
 [ext_resource type="Texture2D" uid="uid://cjxaqj7cp24co" path="res://sprites/dibdab.png" id="2_7mt6r"]
 
-[node name="Dibdab" instance=ExtResource("1_60m16")]
+[node name="Dibdab" groups=["treat"] instance=ExtResource("1_60m16")]
 price = 1
 weight = 1
 
