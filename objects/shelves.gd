@@ -3,9 +3,16 @@ extends StaticBody2D
 const positionOne: Vector2 = Vector2(0, -30)
 const positionTwo: Vector2 = Vector2(0, 30)
 
-@export var products: Array[PackedScene] = []
+@export var boringProducts: Array[PackedScene] = []
+@export var yumProducts: Array[PackedScene] = []
 
 func _ready():
+	var products: Array[PackedScene] = []
+	if (is_in_group("boring")):
+		products = boringProducts
+	else:
+		products = yumProducts
+	
 	var product1Scene: PackedScene = products.pick_random()
 	var product2Scene: PackedScene = products.pick_random()
 	var product1: Product = product1Scene.instantiate()

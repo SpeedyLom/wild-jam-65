@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1hs1lb1csy2s"]
+
+[ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_0kjmv"]
+[ext_resource type="Texture2D" uid="uid://bm8wtn654y56r" path="res://sprites/brocolli.png" id="2_xo28g"]
+
+[node name="Brocolli" instance=ExtResource("1_0kjmv")]
+weight = 4
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_xo28g")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://iajqpwxfew1e"]
+
+[ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_5g22r"]
+[ext_resource type="Texture2D" uid="uid://c0kgf4v83rq02" path="res://sprites/fish.png" id="2_ejld8"]
+
+[node name="Fish" instance=ExtResource("1_5g22r")]
+price = 3
+weight = 4
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ejld8")

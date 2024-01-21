@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://7x70c4uhnf3r"]
+
+[ext_resource type="PackedScene" uid="uid://dvwv65ctv08wr" path="res://objects/product.tscn" id="1_udrqp"]
+[ext_resource type="Texture2D" uid="uid://dm2aykax734er" path="res://sprites/turnip.png" id="2_dhbt8"]
+
+[node name="Turnip" instance=ExtResource("1_udrqp")]
+price = 1
+weight = 5
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dhbt8")

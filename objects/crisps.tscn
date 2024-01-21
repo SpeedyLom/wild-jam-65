@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cwuepq0hjbog5" path="res://sprites/crisps.png" id="1_wnciy"]
 
 [node name="Crisps" instance=ExtResource("1_0duka")]
+price = 3
+weight = 2
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("1_wnciy")

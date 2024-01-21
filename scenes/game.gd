@@ -18,6 +18,6 @@ func _on_timer_timeout():
 	var gameOver = load("res://scenes/game_over.tscn")
 	get_tree().change_scene_to_packed(gameOver)
 	
-func updateScore() -> void:
-	score += 1
+func updateScore(product: Product) -> void:
+	score += product.weight
 	scoreLabel.value = score
